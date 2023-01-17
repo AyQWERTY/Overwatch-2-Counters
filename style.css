@@ -107,3 +107,26 @@ hr{
 .dmg-column:first-child{
     border-right: 2px solid gainsboro;
 }
+
+
+
+/* ------ Stats ------ */
+
+.stat-hero-icon{
+    height: 80px;
+    border-radius: 25px;
+}
+
+.stat-table{
+    padding: 15px;
+}
+
+td{
+    text-align: center;
+    font-size: 25px;
+}
+
+.gold{color: goldenrod; text-decoration: underline; border: 1px solid goldenrod;}
+.silver{color: silver; border: 1px solid silver;}
+.copper{color: chocolate; border: 1px solid chocolate;}
+.gold, .silver, .copper{font-weight: bolder; border-radius: 5px;}
