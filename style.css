@@ -17,6 +17,7 @@ h3{
     font-weight: bold;
     padding: 5px 50px;
     border-radius: 0 0 10px 10px;
+    text-align: center;
 }
 
 .header-desc{
@@ -51,6 +52,12 @@ h3{
 .hero-face img{
     box-shadow: 0 0 5px black;
     border: 1px solid black;
+    cursor: pointer;
+}
+
+.hero-face img:hover{
+    filter: brightness(50%);
+    transition: filter 300ms ease-in-out;
 }
 
 .hero-face h2{

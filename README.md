@@ -1,7 +1,7 @@
 # Owerwatch 2 Counters
 
 *This is a very dumb project with counterpics of various characters in Overwatch 2. The data is taken from videos from the Anak channel.
-Everything here is done manually, without using any scripts or json data files. That's why the project is as dumb as possible, but you can quickly see which hero is better to take.*
+Everything here is done manually, ~~without using any scripts~~ (one line of the script is used) or json data files. That's why the project is as dumb as possible, but you can quickly see which hero is better to take.*
 
 ## What's inside?
 **There are two pages inside:**

@@ -11,7 +11,7 @@
     <title>Overwatch 2 | Counters</title>
 </head>
 <body>
-    <div id="alert"><span>rammatra still missing</span></div>
+    <div id="alert"><span>rammatra still missing<br>click on hero icon = wiki page</span></div>
     <header>
         <h1>Overwatch 2 | Counters chart</h1>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
@@ -658,7 +658,7 @@
                     <div class="hero">
                         <div class="hero-face">
                             <img src="icons/damage/Soldier_76.webp">
-                            <h2>Soldier 76</h2>
+                            <h2>Soldier: 76</h2>
                         </div>
                         <div class="counters">
                             <div class="counter-class">
@@ -1057,4 +1057,7 @@
         </div>
     </div>
 </body>
+<script>document.querySelectorAll(".hero-face").forEach(e => {
+    e.onclick = function () {window.open(`https://overwatch.fandom.com/wiki/${e.childNodes[3].innerText.replace(' ', '_')}`,'_blank');}
+})</script>
 </html>
