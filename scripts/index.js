@@ -1,5 +1,16 @@
-import { test } from "./helpers.js";
+import { capitalize, createSection, getByRole, ROLE } from "./helpers.js";
+import HEROES from "./heroes.js";
 
-console.log("HELLO");
+const ROLES = [ROLE.TANK, ROLE.DAMAGE, ROLE.SUPPORT];
 
-test();
+ROLES.forEach((role) => {
+  createSection(
+    {
+      class: role,
+      icon: `icons/classes/${capitalize(role)}.webp`,
+      title: capitalize(role),
+      contents: getByRole(HEROES, role),
+    },
+    ".counter-table",
+  );
+});

@@ -36,14 +36,8 @@ header {
 
         .superscript {
             text-align: right;
-            white-space: 100%;
         }
     }
-}
-
-.header-desc {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 article.counter-table {
@@ -53,12 +47,12 @@ article.counter-table {
     justify-content: center;
 }
 
-
 section.heroes-class {
     background-color: whitesmoke;
     margin: 25px;
     border-radius: 25px;
     width: min-content;
+    min-width: 445px;
 
     .heroes-dmg {
         flex-grow: 1;
@@ -93,7 +87,7 @@ section.heroes-class {
     }
 }
 
-.class-name {
+.role {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,10 +97,10 @@ section.heroes-class {
     position: sticky;
     top: 0;
     z-index: 10;
-}
 
-.class-name img {
-    height: 120px;
+    img {
+        height: 120px;
+    }
 }
 
 .hero {
@@ -220,7 +214,7 @@ td {
 }
 
 @media screen and (max-width: 500px) {
-    .class-name h1 {
+    .role h2 {
         display: none;
     }
 }
