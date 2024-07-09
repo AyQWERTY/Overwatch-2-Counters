@@ -52,16 +52,10 @@ const openWiki = (hero) => {
   window.open("https://overwatch.fandom.com/wiki/" + hero, "_blank");
 };
 
-document.querySelectorAll(".hero-face").forEach((e) => {
-  e.onclick = function () {
-    openWiki(e.childNodes[3].innerText.replace(" ", "_"));
-  };
-});
-
-document.querySelectorAll(".counter-icon").forEach((e) => {
-  e.onclick = function () {
-    openWiki(e.getAttribute("alt"));
-  };
+document.addEventListener("click", function (e) {
+  if (["hero-icon", "counter-icon"].includes(e.target.className)) {
+    openWiki(e.target.getAttribute("alt").replace(" ", "_"));
+  }
 });
 
 document.querySelector(".search input").addEventListener(

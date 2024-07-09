@@ -94,7 +94,7 @@ const createCounters = (hero) => {
 const createHero = (hero) => {
   return `<div class="hero">
     <div class="hero-face">
-        <img src="${hero.icon}" alt="${hero.name}">
+        <img class="hero-icon" src="${hero.icon}" alt="${hero.name}">
         <h2>${hero.name}</h2>
     </div>
     <div class="counters">${createCounters(hero)}</div>
