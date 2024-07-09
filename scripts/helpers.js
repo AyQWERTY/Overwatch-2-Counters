@@ -30,6 +30,28 @@ export const capitalize = (str) => {
   return str?.charAt(0)?.toUpperCase() + str?.slice(1);
 };
 
+export const isEqualArr = (array1, array2) => {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+
+  return array1.every((obj, index) => {
+    return Object.keys(obj).every((key) => {
+      return obj[key] === array2[index][key];
+    });
+  });
+};
+
+export const debounce = (func, wait) => {
+  let timeout;
+
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+};
+
 const createEl = (selector, str) => {
   const app = document.querySelector(selector);
   app.appendChild(strToHTML(str));
@@ -72,7 +94,7 @@ const createCounters = (hero) => {
 const createHero = (hero) => {
   return `<div class="hero">
     <div class="hero-face">
-        <img src="${hero.icon}">
+        <img src="${hero.icon}" alt="${hero.name}">
         <h2>${hero.name}</h2>
     </div>
     <div class="counters">${createCounters(hero)}</div>
@@ -86,9 +108,13 @@ export const createSection = (data, parent = ".counter-table") => {
     heroes.push(createHero(hero));
   });
 
+  if (!heroes.length) {
+    return;
+  }
+
   createEl(
     parent,
-    `<section class="heroes-class ${data.class}">
+    `<section id="${data.class}" class="heroes-class ${data.class}">
         <header class="role">
             <img class="counter-class-icon" src="${data.icon}" alt="role-logo" aria-hidden="true">
             <h2>${data.title}</h2>

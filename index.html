@@ -26,6 +26,12 @@
         </nav>
     </header>
 
+    <div class="search">
+        <label>Search</label>
+        <input type="text">
+        <button>Clear</button>
+    </div>
+
     <article class="counter-table"></article>
 
     <footer>
@@ -33,8 +39,11 @@
             <img class="repo" src="icons/github-mark.svg" alt="github-mark"> Github repo
         </a>
     </footer>
+
+    <nav class="mobile">
+        <a href="#tank"><img src="icons/classes/Tank.webp" alt="tank"></a>
+        <a href="#damage"><img src="icons/classes/Damage.webp" alt="tank"></a>
+        <a href="#support"><img src="icons/classes/Support.webp" alt="tank"></a>
+    </nav>
 </body>
-<script>document.querySelectorAll(".hero-face").forEach(e => {
-    e.onclick = function () {window.open(`https://overwatch.fandom.com/wiki/${e.childNodes[3].innerText.replace(' ', '_')}`,'_blank');}
-})</script>
 </html>
