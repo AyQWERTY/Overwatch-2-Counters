@@ -64,22 +64,6 @@ const data = [
     ],
   },
   {
-    name: "Ramattra",
-    icon: "icons/tank/Ramattra.webp",
-    role: "tank",
-    counterpicks: [
-      "N/A",
-      "N/A",
-      "N/A",
-      "N/A",
-      "N/A",
-      "N/A",
-      "N/A",
-      "N/A",
-      "N/A",
-    ],
-  },
-  {
     name: "Reinhardt",
     icon: "icons/tank/Reinhardt.webp",
     role: "tank",

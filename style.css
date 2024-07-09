@@ -18,12 +18,17 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 0;
+    text-align: center;
 }
+
+
 
 h3 {
     font-style: italic;
     margin: 0;
 }
+
+
 
 header {
     display: flex;
@@ -33,6 +38,7 @@ header {
 
     .title {
         position: relative;
+        margin-bottom: 1em;
 
         .superscript {
             text-align: right;
@@ -109,7 +115,7 @@ section.heroes-class {
 .hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     padding: 15px 15px;
 }
@@ -235,6 +241,14 @@ nav.mobile {
     }
 }
 
+.ow2-full {
+    display: inline;
+}
+
+.ow2-short {
+    display: none;
+}
+
 @media screen and (max-width: 1700px) {
     article.counter-table {
         flex-wrap: wrap;
@@ -295,5 +309,12 @@ nav.mobile {
         width: auto;
         height: 3em;
         border-radius: 0;
+    }
+
+    .ow2-full {
+        display: none;
+    }
+    .ow2-short {
+        display: inline;
     }
 }
