@@ -1,4 +1,4 @@
-body{
+body {
     background-color: bisque;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -7,12 +7,7 @@ body{
     margin: 0;
 }
 
-h3{
-    font-style: italic;
-    margin: 0;
-}
-
-#alert{
+#alert {
     background-color: #F4CA16;
     font-weight: bold;
     padding: 5px 50px;
@@ -20,120 +15,212 @@ h3{
     text-align: center;
 }
 
-.header-desc{
+h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-style: italic;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+
+    .title {
+        position: relative;
+
+        .superscript {
+            text-align: right;
+            white-space: 100%;
+        }
+    }
+}
+
+.header-desc {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.counter-table{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+article.counter-table {
+    display: flex;
+    flex-direction: row;
     width: min-content;
-    /* max-width: 100%; */
-    overflow: visible;
+    justify-content: center;
 }
 
-.heroes-class{
+
+section.heroes-class {
     background-color: whitesmoke;
     margin: 25px;
     border-radius: 25px;
+    width: min-content;
+
+    .heroes-dmg {
+        flex-grow: 1;
+    }
 }
 
-.hero img{
+.hero img {
     height: 120px;
     border-radius: 50%;
 }
 
-.counter-class img{
+.counter-class img {
     height: 50px;
     border-radius: 25%;
 }
 
-.hero-face img{
-    box-shadow: 0 0 5px black;
-    border: 1px solid black;
-    cursor: pointer;
+.hero-face {
+    img {
+        box-shadow: 0 0 5px black;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    img:hover {
+        filter: brightness(50%);
+        transition: filter 300ms ease-in-out;
+    }
+
+    h2 {
+        margin: 10px 0;
+        text-align: center;
+    }
 }
 
-.hero-face img:hover{
-    filter: brightness(50%);
-    transition: filter 300ms ease-in-out;
-}
-
-.hero-face h2{
-    margin: 10px 0;
-}
-
-.class-name{
+.class-name {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    font-style: italic;
     background-color: #05a0fa;
     border-radius: 25px 25px 0 0;
-    border-bottom: 2px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.class-name img{
+.class-name img {
     height: 120px;
 }
 
-.hero{
+.hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 10px 30px;
+    padding: 15px 30px;
 }
 
-hr{
+.hero:not(:last-child) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+hr {
     width: 90%;
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.counters{
+.counters {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
 }
 
-.counter-class{
+.counter-class {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-.counter-class-icon{
+.counter-class-icon {
     filter: brightness(0) saturate(100%) invert(12%) sepia(11%) saturate(2446%) hue-rotate(185deg) brightness(97%) contrast(92%);
 }
 
-.heroes-dmg{
+.heroes-dmg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.dmg-column:first-child{
+.dmg-column:first-child {
     border-right: 2px solid gainsboro;
 }
 
+a {
+    text-decoration: none;
+    color: #05a0fa;
+
+    &.repo {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin: 10px 0;
+    }
+}
+
+img.repo {
+    height: 24px;
+}
 
 
 /* ------ Stats ------ */
 
-.stat-hero-icon{
+.stat-hero-icon {
     height: 80px;
     border-radius: 25px;
 }
 
-.stat-table{
+.stat-table {
     padding: 15px;
 }
 
-td{
+td {
     text-align: center;
     font-size: 25px;
 }
 
-.gold{color: goldenrod; text-decoration: underline; border: 1px solid goldenrod;}
-.silver{color: silver; border: 1px solid silver;}
-.copper{color: chocolate; border: 1px solid chocolate;}
-.gold, .silver, .copper{font-weight: bolder; border-radius: 5px;}
+.gold {
+    color: goldenrod;
+    text-decoration: underline;
+    border: 1px solid goldenrod;
+}
+
+.silver {
+    color: silver;
+    border: 1px solid silver;
+}
+
+.copper {
+    color: chocolate;
+    border: 1px solid chocolate;
+}
+
+.gold, .silver, .copper {
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1700px) {
+    article.counter-table {
+        flex-wrap: wrap;
+    }
+
+    .heroes-dmg {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-face {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .class-name h1 {
+        display: none;
+    }
+}
