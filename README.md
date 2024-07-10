@@ -9,7 +9,3 @@ The data is taken from videos from the Anak channel.
 **There are two pages inside:**
 - **[Home page](https://ayqwerty.github.io/Overwatch-2-Counters/)**: here you will find 3 counter-picks for the different classes for each hero
 - **[Stats](https://ayqwerty.github.io/Overwatch-2-Counters/stats/)**: here you can find information about how often a character was a counterpick ~~*(quality index lmao)*~~
-
-## To do
-- add data for missing heroes: ramattra, mauga, venture, illari, lifeweaver
-- maybe implement two-col original design for middle col for wide screens
