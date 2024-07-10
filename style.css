@@ -57,11 +57,35 @@ section.heroes-class {
     background-color: whitesmoke;
     margin: 25px;
     border-radius: 25px;
-    width: min-content;
     min-width: 445px;
+    max-width: 780px;
+
+    &.wide {
+        max-width: fit-content;
+    }
 
     .heroes-dmg {
         flex-grow: 1;
+    }
+}
+
+.xcol {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+
+    .hero {
+        width: 49%;
+        position: relative;
+
+        &:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -8px;
+            height: 100%;
+            border-left: 2px solid rgba(0, 0, 0, 0.05);
+        }
     }
 }
 
@@ -106,6 +130,8 @@ section.heroes-class {
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100%;
+    height: fit-content;
 
     img {
         height: 120px;
@@ -274,6 +300,24 @@ nav.mobile {
         margin: 25px 0;
         padding: 0;
         width: 100%;
+    }
+
+    .xcol {
+        display: block;
+
+        .hero {
+            width: auto;
+            position: relative;
+
+            &:nth-child(odd):before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -8px;
+                height: 100%;
+                border-left: none;
+            }
+        }
     }
 
     .role {

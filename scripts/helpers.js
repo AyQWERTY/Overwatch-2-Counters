@@ -112,13 +112,15 @@ export const createSection = (data, parent = ".counter-table") => {
     return;
   }
 
+  const extraClass = data.class === ROLE.DAMAGE ? "xcol" : "";
+
   createEl(
     parent,
-    `<section id="${data.class}" class="heroes-class ${data.class}">
-        <header class="role">
+    `<section id="${data.class}" class="heroes-class ${data.class} ${extraClass}">
+        <div class="role">
             <img class="counter-class-icon" src="${data.icon}" alt="role-logo" aria-hidden="true">
             <h2>${data.title}</h2>
-        </header>
+        </div>
         ${heroes.join("")}
     </section>`,
   );
