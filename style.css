@@ -50,7 +50,8 @@ article.counter-table {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    overflow: clip
+    overflow: clip;
+    align-items: flex-start;
 }
 
 section.heroes-class {
