@@ -112,7 +112,7 @@ section.heroes-class {
     }
 
     img:hover {
-        background-color: #ffc70e;
+        background-color: #ffc466;
         transition: background-color 300ms ease-in-out;
     }
 
@@ -169,7 +169,7 @@ section.heroes-class {
 
 .counter-icon:hover{
     cursor: pointer;
-    background-color: #ffc70e;
+    background-color: #ffc466;
     transition: background-color 300ms ease-in-out;
 }
 
