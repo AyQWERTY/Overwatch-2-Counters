@@ -42,6 +42,7 @@ header {
 
         .superscript {
             text-align: right;
+            font-style: italic;
         }
     }
 }
@@ -111,13 +112,13 @@ section.heroes-class {
     }
 
     img:hover {
-        filter: brightness(50%);
-        transition: filter 300ms ease-in-out;
+        background-color: #ffc70e;
+        transition: background-color 300ms ease-in-out;
     }
 
     h2 {
-        margin: 10px 0;
-        text-align: center;
+        margin: 10px auto 10px 0;
+        text-align: left;
     }
 }
 
@@ -128,6 +129,7 @@ section.heroes-class {
     padding: 30px;
     background-color: #05a0fa;
     border-radius: 25px 25px 0 0;
+    border-bottom: 2px solid black;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -163,6 +165,12 @@ section.heroes-class {
 
 .counter-class-icon {
     filter: brightness(0) saturate(100%) invert(12%) sepia(11%) saturate(2446%) hue-rotate(185deg) brightness(97%) contrast(92%);
+}
+
+.counter-icon:hover{
+    cursor: pointer;
+    background-color: #ffc70e;
+    transition: background-color 300ms ease-in-out;
 }
 
 .heroes-dmg {
