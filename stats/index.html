@@ -10,10 +10,10 @@
     <title>Counters stats</title>
 </head>
 <body style="height: 100%; display: flex; align-items: center;">
-    <div id="alert"><span>rammatra still missing</span></div>
+    <div id="alert">needs updating</div>
     <header>
         <h1>Overwatch 2 | Counters stats</h1>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
+        <div style="display: flex; justify-content: space-between;">
             <h3>Counters by <a href="https://www.youtube.com/@Anakq" target="_blank">Anak</a></h3>
             <h3 style="text-align: right;"><a href="../">Chart</a></h3>
             <h3 style="text-align: right;"><a href="https://github.com/AyQWERTY/Overwatch-2-Counters" target="_blank">Repo</a></h3>
@@ -21,9 +21,9 @@
     </header>
 
     <div class="counter-table" style="grid-template-columns: none; margin: auto;">
-        <div class="heroes-class" style="margin: 25px auto; width: min-content;">
-            <div class="class-name" style="padding: 0;">
-                <h1>Tank</h1>
+        <section class="heroes-class wide" style="margin: 25px auto; width: min-content;">
+            <div class="role" style="padding: 0;">
+                <h2>Tank</h2>
             </div>
 
             <table class="stat-table">
@@ -56,11 +56,11 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </section>
 
-        <div class="heroes-class" style="margin: 25px auto; width: min-content;">
-            <div class="class-name" style="padding: 0;">
-                <h1>Damage</h1>
+        <section class="heroes-class wide" style="margin: 25px auto; width: min-content;">
+            <div class="role" style="padding: 0;">
+                <h2>Damage</h2>
             </div>
 
             <table class="stat-table">
@@ -109,11 +109,11 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </section>
 
-        <div class="heroes-class" style="margin: 25px auto; width: min-content;">
-            <div class="class-name" style="padding: 0;">
-                <h1>Support</h1>
+        <section class="heroes-class wide" style="margin: 25px auto; width: min-content;">
+            <div class="role" style="padding: 0;">
+                <h2>Support</h2>
             </div>
 
             <table class="stat-table">
@@ -140,7 +140,7 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </section>
     </div>
 </body>
 </html>
