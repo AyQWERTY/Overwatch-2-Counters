@@ -7,5 +7,5 @@ The data is taken from videos from the Anak channel.
 
 ## What's inside?
 **There are two pages inside:**
-- **[Home page](https://git.t3s.mov/ow2/)**: counter-picks for each hero
-- **[Stats](https://git.t3s.mov/ow2/stats)**: information about how often a hero was a counterpick ~~*(quality index)*~~
+- **[Home page](https://ayqwerty.github.io/Overwatch-2-Counters/)**: counter-picks for each hero
+- **[Stats](https://ayqwerty.github.io/Overwatch-2-Counters/stats)**: information about how often a hero was a counterpick ~~*(quality index)*~~
