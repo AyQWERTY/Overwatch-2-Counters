@@ -1,2 +1,5 @@
 *.xlsx
 *.db
+*.py
+*.csv
+*.old

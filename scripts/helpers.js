@@ -68,9 +68,9 @@ const createRoleRow = (role, heroes) => {
 };
 
 const createCounters = (hero) => {
-  const counterNames = hero.counterpicks;
+  const counterData = hero.counters;
 
-  if (!counterNames) {
+  if (!counterData) {
     return "";
   }
 
@@ -79,13 +79,16 @@ const createCounters = (hero) => {
     [ROLE.DAMAGE]: [],
     [ROLE.SUPPORT]: [],
   };
+
+  const counterNames = Object.keys(counterData);
+
   HEROES.filter((h) => counterNames.includes(h.name)).forEach((h) => {
     counterPicks[h.role].push(h);
   });
 
   let rolesRows = "";
-  Object.values(counterPicks).forEach((heroes) => {
-    rolesRows += createRoleRow(heroes?.[0]?.role, heroes);
+  Object.entries(counterPicks).forEach(([role, heroes]) => {
+    rolesRows += createRoleRow(role, heroes);
   });
 
   return rolesRows;
