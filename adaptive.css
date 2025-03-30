@@ -1,0 +1,87 @@
+@media screen and (max-width: 1700px) {
+    article.counter-table {
+        flex-wrap: wrap;
+    }
+
+    .heroes-dmg {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .role h2 {
+        display: none;
+    }
+
+    article {
+        width: 100vw;
+        margin: 0;
+    }
+
+    section.heroes-class {
+        margin: 25px 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .xcol {
+        display: block;
+
+        .hero {
+            width: auto;
+            position: relative;
+
+            &:nth-child(odd):before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -8px;
+                height: 100%;
+                border-left: none;
+            }
+        }
+    }
+
+    .role {
+        border-radius: 0;
+
+        img {
+            height: 60px;
+        }
+    }
+
+    nav.mobile {
+        position: fixed;
+        bottom: 0;
+        height: 80px;
+        background-color: #535353;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 20;
+        column-gap: 15px;
+
+
+        a {
+            img {
+                width: 64px;
+            }
+        }
+    }
+
+    .search {
+        margin: 0 15px;
+        overflow: hidden;
+        width: auto;
+        height: 3em;
+        border-radius: 0;
+    }
+
+    .ow2-full {
+        display: none;
+    }
+    .ow2-short {
+        display: inline;
+    }
+}

@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icons/favicon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="adaptive.css">
+    <link rel="shortcut icon" href="icons/favicon.webp" type="image/webp">
 
     <script type="module" src="scripts/index.js"></script>
     <script src="scripts/stats.js"></script>
@@ -18,15 +19,25 @@
     <header>
         <div class="title">
             <h1><span class="ow2-full">Overwatch 2</span><span class="ow2-short">OW2</span> | Counters chart</h1>
-            <div class="superscript">picks by <a href="https://www.youtube.com/@Anakq" target="_blank">Anak</a></div>
-            <p>Click hero icon for wiki</p>
-            <p><a href="./stats">Statistics</a></p>
+            <p><b>Hero Icon</b>: <b>Click</b> to open the wiki | <b>Hover</b> to see the description</p>
+            <p style="color: coral;"><i>Only the description is translated</i></p>
+        </div>
+
+        <div class="role-selector">
+            <button data-role="tank">Tank</button>
+            <button data-role="damage">Damage</button>
+            <button data-role="support">Support</button>
         </div>
         
-        <div class="search">
+        <!-- <div class="search">
             <label>Search</label>
             <input type="text">
             <button>Clear</button>
+        </div> -->
+
+        <div class="lang-selector">
+            <img src="icons/flags/en.png" alt="EN" data-lang="en">
+            <img src="icons/flags/ua.png" alt="UA" data-lang="ua">
         </div>
     </header>
 

@@ -14,6 +14,8 @@ export const getByRole = (arr, role) => {
   return arr.filter((i) => i.role.toLowerCase() === role.toLowerCase());
 };
 
+const selectedLang = localStorage.getItem('selectedLang');
+
 const strToHTML = (html, trim = true) => {
   html = trim ? html.trim() : html;
   if (!html) return null;
@@ -61,7 +63,11 @@ const createRoleRow = (role, heroes) => {
   let html = "";
 
   heroes.forEach((h) => {
-    html += `<img class="counter-icon" src="${h.icon}" alt="${h.name}">`;
+    html += `
+      <span class="counter-icon" data-tooltip="${h.description}">
+        <img class="counter-img" src="${h.icon}" alt="${h.name}">
+      </span>
+    `;
   });
 
   return `<div class="counter-class"><img class="counter-class-icon" src="icons/classes/${capitalize(role)}.webp">${html}</div>`;
@@ -83,7 +89,12 @@ const createCounters = (hero) => {
   const counterNames = Object.keys(counterData);
 
   HEROES.filter((h) => counterNames.includes(h.name)).forEach((h) => {
-    counterPicks[h.role].push(h);
+    counterPicks[h.role].push({
+      'name': h.name,
+      'icon': h.icon,
+      'role': h.role,
+      'description': counterData[h.name][selectedLang]
+    });
   });
 
   let rolesRows = "";
@@ -120,10 +131,6 @@ export const createSection = (data, parent = ".counter-table") => {
   createEl(
     parent,
     `<section id="${data.class}" class="heroes-class ${data.class} ${extraClass}">
-        <div class="role">
-            <img class="counter-class-icon" src="${data.icon}" alt="role-logo" aria-hidden="true">
-            <h2>${data.title}</h2>
-        </div>
         ${heroes.join("")}
     </section>`,
   );
